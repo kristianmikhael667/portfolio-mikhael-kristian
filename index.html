@@ -1,11 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio ~ Mikhael Kristian</title>
     <link rel="stylesheet" href="src/output.css" />
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
   </head>
   <body>
     <!-- Header Start -->
@@ -39,50 +50,66 @@
 
             <nav
               id="nav-menu"
-              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-500 lg:dark:bg-transparent"
             >
               <ul class="block lg:flex">
                 <li class="group">
                   <a
-                    class="text-base text-dark py-2 mx-8 flex hover:text-primary"
+                    class="text-base text-dark py-2 mx-8 flex hover:text-primary dark:text-white"
                     href="#home"
                     >Home</a
                   >
                 </li>
                 <li class="group">
                   <a
-                    class="text-base text-dark py-2 mx-8 flex hover:text-primary"
+                    class="text-base text-dark py-2 mx-8 flex hover:text-primary dark:text-white"
                     href="#about"
                     >About</a
                   >
                 </li>
                 <li class="group">
                   <a
-                    class="text-base text-dark py-2 mx-8 flex hover:text-primary"
+                    class="text-base text-dark py-2 mx-8 flex hover:text-primary dark:text-white"
                     href="#portfolio"
                     >Portfolio</a
                   >
                 </li>
                 <li class="group">
                   <a
-                    class="text-base text-dark py-2 mx-8 flex hover:text-primary"
+                    class="text-base text-dark py-2 mx-8 flex hover:text-primary dark:text-white"
                     href="#company"
                     >Company</a
                   >
                 </li>
                 <li class="group">
                   <a
-                    class="text-base text-dark py-2 mx-8 flex hover:text-primary"
+                    class="text-base text-dark py-2 mx-8 flex hover:text-primary dark:text-white"
                     href="#blog"
                     >Blog</a
                   >
                 </li>
                 <li class="group">
                   <a
-                    class="text-base text-dark py-2 mx-8 flex hover:text-primary"
+                    class="text-base text-dark py-2 mx-8 flex hover:text-primary dark:text-white"
                     href="#contact"
                     >Contact</a
                   >
+                </li>
+                <li class="mt-3 lg:mt-0 flex items-center pl-8">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">light</span>
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div
+                        class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1"
+                      >
+                        <div
+                          class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"
+                        ></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">dark</span>
+                  </div>
                 </li>
               </ul>
             </nav>
@@ -93,25 +120,28 @@
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="pt-36">
+    <section id="home" class="pt-36 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
             <h1 class="text-base font-semibold text-primary md:text-xl">
               Hi All 👋, I'm
-              <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl"
+              <span
+                class="block font-bold text-dark text-4xl mt-1 lg:text-5xl dark:text-white"
                 >Mikhael Kristian</span
               >
             </h1>
             <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">
-              Fullstack <span class="text-dark">Developer</span>
+              Fullstack <span class="text-dark dark:text-white">Developer</span>
             </h2>
             <p class="font-medium text-secondary mb-10 leading-relaxed">
               Efficient and experienced professional with proven knowledge of
               programming. Aiming to leverage my abilities to successfully fill
               the
-              <span class="text-dark font-bold"> Fullstack Developer</span> role
-              on my team.
+              <span class="text-dark font-bold dark:text-white">
+                Fullstack Developer</span
+              >
+              role on my team.
             </p>
 
             <a
@@ -122,9 +152,20 @@
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
             <div class="relative mt-10 lg:right-0 lg:mt-9">
-              <img src="src/img/mike.png" alt="Sandhika Galih" class="relative z-10 mx-auto max-w-full" />
-              <span class="absolute bottom-20 left-1/2 -translate-x-1/2 md:scale-125">
-                <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <img
+                src="src/img/mike.png"
+                alt="mikhael"
+                class="relative z-10 mx-auto max-w-full"
+              />
+              <span
+                class="absolute bottom-20 left-1/2 -translate-x-1/2 md:scale-125"
+              >
+                <svg
+                  width="400"
+                  height="400"
+                  viewBox="0 0 200 200"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     fill="#2563eb"
                     d="M47.4,-51C59.2,-35.6,65.1,-17.8,63.4,-1.7C61.7,14.5,52.6,28.9,40.8,36.6C28.9,44.2,14.5,45,-2,47C-18.4,49,-36.8,52.1,-45.4,44.5C-53.9,36.8,-52.5,18.4,-51.2,1.3C-49.9,-15.8,-48.7,-31.7,-40.2,-47.1C-31.7,-62.4,-15.8,-77.3,1,-78.3C17.8,-79.2,35.6,-66.3,47.4,-51Z"
@@ -140,14 +181,16 @@
     <!-- Hero Section End -->
 
     <!-- About Section Start -->
-    <section id="about" class="pt-36 pb-32">
+    <section id="about" class="pt-36 pb-32 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full px-4 mb-10 lg:w-1/2">
             <h4 class="font-bold uppercase text-primary text-lg mb-3">
               About Me
             </h4>
-            <h2 class="font-bold text-dart text-3xl mb-5 max-w-md lg:text-4xl">
+            <h2
+              class="font-bold text-dart text-3xl mb-5 max-w-md lg:text-4xl dark:text-white"
+            >
               Learn Fullstack in Mikhael
             </h2>
             <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">
@@ -157,7 +200,7 @@
           </div>
           <div class="w-full px-4 lg:w-1/2">
             <h3
-              class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10"
+              class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white"
             >
               Let's create friends
             </h3>
@@ -255,13 +298,13 @@
     <!-- About Section End -->
 
     <!-- Portfolio Section Start -->
-    <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
+    <section id="portfolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
             <h2
-              class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl"
+              class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white"
             >
               Personal Project
             </h2>
@@ -276,7 +319,11 @@
           class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto"
         >
           <div class="mb-10 p-4 md:w-1/2">
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">QGames</h3>
+            <h3
+              class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white"
+            >
+              QGames
+            </h3>
             <p class="font-medium text-base text-secondary">
               QGames adalah solusi terbaik untuk kebutuhan top up game dan
               voucher game Anda. Dirancang untuk memberikan akses yang aman,
@@ -334,7 +381,9 @@
             </div>
           </div>
           <div class="mb-10 p-4 md:w-1/2">
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">
+            <h3
+              class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white"
+            >
               Mitra QGROW
             </h3>
             <p class="font-medium text-base text-secondary">
@@ -394,7 +443,9 @@
             </div>
           </div>
           <div class="mb-10 p-4 md:w-1/2">
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">
+            <h3
+              class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white"
+            >
               Bank Sha Apps
             </h3>
             <p class="font-medium text-base text-secondary">
@@ -410,7 +461,9 @@
             </div>
           </div>
           <div class="mb-10 p-4 md:w-1/2">
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">
+            <h3
+              class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white"
+            >
               Shamo Apps
             </h3>
             <p class="font-medium text-base text-secondary">
@@ -431,13 +484,13 @@
     <!-- Portfolio Section End -->
 
     <!-- Company Section Start -->
-    <section id="company" class="pt-36 pb-32 bg-slate-300">
+    <section id="company" class="pt-36 pb-32 bg-slate-800 dark:bg-slate-300">
       <div class="container">
         <div class="w-full px-4">
           <div class="mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-primary mb-2">Company</h4>
             <h2
-              class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl"
+              class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-dark"
             >
               Experience Job
             </h2>
@@ -450,7 +503,6 @@
         </div>
         <div class="w-full px-4">
           <div class="flex flex-wrap items-center justify-center">
-
             <!-- Karlin Experience -->
             <button
               class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8 cursor-pointer"
@@ -555,7 +607,10 @@
                       data.
                     </li>
                   </ul>
-                  <h3><span class="font-bold">Skills:</span> AJAX · CodeIgniter · JavaScript · MySQL · PHP · Debugging</h3>
+                  <h3>
+                    <span class="font-bold">Skills:</span> AJAX · CodeIgniter ·
+                    JavaScript · MySQL · PHP · Debugging
+                  </h3>
                 </div>
                 <div
                   class="shrink-0 flex-wrap p-4 text-blue-gray-500 justify-between gap-2 border-t border-blue-gray-50"
@@ -668,7 +723,10 @@
                       to sell their services easily.
                     </li>
                   </ul>
-                  <h3><span class="font-bold">Skills:</span> React.js · CodeIgniter · JavaScript · PostgreSQL · Laravel · Debugging</h3>
+                  <h3>
+                    <span class="font-bold">Skills:</span> React.js ·
+                    CodeIgniter · JavaScript · PostgreSQL · Laravel · Debugging
+                  </h3>
                 </div>
                 <div
                   class="shrink-0 flex-wrap p-4 text-blue-gray-500 justify-between gap-2 border-t border-blue-gray-50"
@@ -763,29 +821,49 @@
                   </p>
                   <p>Jakarta Selatan, Jakarta, Indonesia · Hybrid</p>
                   <p>
-                    Produk dan layanan internet yang menggunakan integrasi serat optik dan jaringan radio untuk kebutuhan bisnis dan perumahan. Jaringan IP1 tersebar dan mencakup wilayah Jakarta, Solo, D.I Yogyakarta, Makassar, Manado, Kendari, Bogor dan Cipanas Puncak. Merek IP1 dimiliki oleh PT Citra Agung Mestika.
+                    Produk dan layanan internet yang menggunakan integrasi serat
+                    optik dan jaringan radio untuk kebutuhan bisnis dan
+                    perumahan. Jaringan IP1 tersebar dan mencakup wilayah
+                    Jakarta, Solo, D.I Yogyakarta, Makassar, Manado, Kendari,
+                    Bogor dan Cipanas Puncak. Merek IP1 dimiliki oleh PT Citra
+                    Agung Mestika.
                   </p>
                   <ul class="mb-2">
                     <li>
-                      1. Designing, developing, and maintaining the website ip1.co.id by understanding project requirements and specifications.
+                      1. Designing, developing, and maintaining the website
+                      ip1.co.id by understanding project requirements and
+                      specifications.
                     </li>
                     <li>
-                      2. Implementing user designs provided by graphic designers or UI/UX design teams, focusing on creating a responsive and appealing user interface.
+                      2. Implementing user designs provided by graphic designers
+                      or UI/UX design teams, focusing on creating a responsive
+                      and appealing user interface.
                     </li>
                     <li>
-                      3. Building server-side functions necessary to support website functionality, including database management, form processing, and security.
+                      3. Building server-side functions necessary to support
+                      website functionality, including database management, form
+                      processing, and security.
                     </li>
                     <li>
-                      4. Integrating various systems and third-party services to enhance the functionality and performance of the ip1.co.id website.
+                      4. Integrating various systems and third-party services to
+                      enhance the functionality and performance of the ip1.co.id
+                      website.
                     </li>
                     <li>
-                      5. Ensuring optimal website performance by conducting debugging, troubleshooting, and code optimazation.
+                      5. Ensuring optimal website performance by conducting
+                      debugging, troubleshooting, and code optimazation.
                     </li>
                     <li>
-                      6. Performing regular maintenance tasks, including software updates, security enhancements, and monitoring site performance for ip1.co.id
+                      6. Performing regular maintenance tasks, including
+                      software updates, security enhancements, and monitoring
+                      site performance for ip1.co.id
                     </li>
                   </ul>
-                  <h3><span class="font-bold">Skills:</span> React.js · React Native · CodeIgniter · MySQL · MongoDB · Next.js · Laravel · Express.js · Node.js · Debugging</h3>
+                  <h3>
+                    <span class="font-bold">Skills:</span> React.js · React
+                    Native · CodeIgniter · MySQL · MongoDB · Next.js · Laravel ·
+                    Express.js · Node.js · Debugging
+                  </h3>
                 </div>
                 <div
                   class="shrink-0 flex-wrap p-4 text-blue-gray-500 justify-between gap-2 border-t border-blue-gray-50"
@@ -880,32 +958,40 @@
                   </p>
                   <p>Jakarta Raya, Indonesia · On-site</p>
                   <p>
-                    Platform pembayaran dompet elektronik yang menyediakan layanan dan fitur yang memudahkan pelanggan.
+                    Platform pembayaran dompet elektronik yang menyediakan
+                    layanan dan fitur yang memudahkan pelanggan.
                   </p>
                   <ul class="mb-2">
                     <li>
-                      1. Implementing the addition of a new service using microservices concepts.
+                      1. Implementing the addition of a new service using
+                      microservices concepts.
                     </li>
+                    <li>2. Rectifying bugs in the backend source code.</li>
                     <li>
-                      2. Rectifying bugs in the backend source code.
-                    </li>
-                    <li>
-                      3. Performing maintenance and managing development and production servers.
+                      3. Performing maintenance and managing development and
+                      production servers.
                     </li>
                     <li>
                       4. Conducting testing and debugging on each used endpoint.
                     </li>
                     <li>
-                      5. Collaborating with Frontend Developers and other stakeholders such as.
+                      5. Collaborating with Frontend Developers and other
+                      stakeholders such as.
                     </li>
                     <li>
-                      6. Analysts, Customer Service, UI/UX, QA Engineers, and others to build the mobile application.
+                      6. Analysts, Customer Service, UI/UX, QA Engineers, and
+                      others to build the mobile application.
                     </li>
                     <li>
-                      7. Assisting in developing the overall architecture, including microservices in the backend.
+                      7. Assisting in developing the overall architecture,
+                      including microservices in the backend.
                     </li>
                   </ul>
-                  <h3><span class="font-bold">Skills:</span> Kubernetes · Flutter · Slim Framework · Docker · Go (Programming Language) · Debugging · Microservices</h3>
+                  <h3>
+                    <span class="font-bold">Skills:</span> Kubernetes · Flutter
+                    · Slim Framework · Docker · Go (Programming Language) ·
+                    Debugging · Microservices
+                  </h3>
                 </div>
                 <div
                   class="shrink-0 flex-wrap p-4 text-blue-gray-500 justify-between gap-2 border-t border-blue-gray-50"
@@ -922,7 +1008,6 @@
               </div>
             </div>
             <!-- doomo Experience -->
-
           </div>
         </div>
       </div>
@@ -930,13 +1015,13 @@
     <!-- Company Section End -->
 
     <!-- Blog Section Start -->
-    <section id="blog" class="pt-36 pb-32 bg-slate-100">
+    <section id="blog" class="pt-36 pb-32 bg-slate-100 dark:bg-dark">
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-primary mb-2">Blog</h4>
             <h2
-              class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl"
+              class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white"
             >
               Latest News
             </h2>
@@ -948,7 +1033,9 @@
         </div>
         <div class="flex flex-wrap">
           <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+            <div
+              class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800"
+            >
               <img
                 src="https://source.unsplash.com/360x200?programming"
                 alt="programing"
@@ -958,7 +1045,7 @@
                 <h3>
                   <a
                     href="#"
-                    class="block mb-6 font-semibold text-xl text-dark hover:text-primary truncate"
+                    class="block mb-6 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white"
                     >Trick Learn Programming</a
                   >
                 </h3>
@@ -975,7 +1062,9 @@
             </div>
           </div>
           <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+            <div
+              class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800"
+            >
               <img
                 src="https://source.unsplash.com/360x200?saxophone"
                 alt="saxophone"
@@ -985,7 +1074,7 @@
                 <h3>
                   <a
                     href="#"
-                    class="block mb-6 font-semibold text-xl text-dark hover:text-primary truncate"
+                    class="block mb-6 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white"
                     >Saxophone is CK</a
                   >
                 </h3>
@@ -1002,7 +1091,9 @@
             </div>
           </div>
           <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+            <div
+              class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800"
+            >
               <img
                 src="https://source.unsplash.com/360x200?drum"
                 alt="drum"
@@ -1012,7 +1103,7 @@
                 <h3>
                   <a
                     href="#"
-                    class="block mb-6 font-semibold text-xl text-dark hover:text-primary truncate"
+                    class="block mb-6 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white"
                     >Drummer Pro Aeron</a
                   >
                 </h3>
@@ -1034,13 +1125,13 @@
     <!-- Blog Section End -->
 
     <!-- Contact Section Start -->
-    <section id="contact" class="pt-36 pb-32">
+    <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
             <h2
-              class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl"
+              class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white"
             >
               Contact Me
             </h2>
@@ -1279,6 +1370,16 @@
       </div>
     </footer>
     <!-- Footer End -->
+
+    <!-- Back to top Start -->
+    <a
+      href="#home"
+      class="hidden h-14 w-14 bg-primary rounded-full fixed z-[9999] bottom-4 right-4 p-4 justify-center items-center hover:animate-pulse"
+      id="to-top"
+    >
+      <span class="block w-5 h-5 border-t-2 border-l-2 rotate-45 mt-2"></span>
+    </a>
+    <!-- Back to top End -->
 
     <script src="src/js/script.js"></script>
     <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/dialog.js"></script>
