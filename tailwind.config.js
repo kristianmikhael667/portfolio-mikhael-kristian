@@ -14,6 +14,7 @@ module.exports = {
         dark: '#0f172a'
       },
       screens:{
+        'iphone' : '320px',
         '2xl' : '1320px',
       }
     },

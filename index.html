@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio ~ Mikhael Kristian</title>
-    <link rel="stylesheet" href="src/css/final.css" />
+    <link rel="stylesheet" href="src/output.css" />
     <script>
       if (
         localStorage.theme === "dark" ||
@@ -77,15 +77,15 @@
                 <li class="group">
                   <a
                     class="text-base text-dark py-2 mx-8 flex hover:text-primary dark:text-white"
-                    href="#company"
-                    >Company</a
+                    href="#experience"
+                    >My Experience</a
                   >
                 </li>
                 <li class="group">
                   <a
                     class="text-base text-dark py-2 mx-8 flex hover:text-primary dark:text-white"
-                    href="#blog"
-                    >Blog</a
+                    href="#services"
+                    >Services</a
                   >
                 </li>
                 <li class="group">
@@ -133,14 +133,17 @@
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="pt-36 dark:bg-dark">
+    <section
+      id="home"
+      class="relative lg:p-0 items-center iphone:pt-36 dark:bg-dark"
+    >
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
             <h1 class="text-base font-semibold text-primary md:text-xl">
               Hi All 👋, I'm
               <span
-                class="block font-bold text-dark text-4xl mt-1 lg:text-5xl dark:text-white"
+                class="block font-bold bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent text-4xl mt-1 lg:text-5xl dark:text-white"
                 >Mikhael Kristian</span
               >
             </h1>
@@ -158,7 +161,7 @@
             </p>
 
             <a
-              href="#"
+              href="#contact"
               class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 duration-300 ease-in-out"
               >Contact Me</a
             >
@@ -174,8 +177,7 @@
                 class="absolute bottom-20 left-1/2 -translate-x-1/2 md:scale-125"
               >
                 <svg
-                  width="400"
-                  height="400"
+                  id="background-gans"
                   viewBox="0 0 200 200"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -204,11 +206,12 @@
             <h2
               class="font-bold text-dart text-3xl mb-5 max-w-md lg:text-4xl dark:text-white"
             >
-              Learn Fullstack in Mikhael
+              What I Do
             </h2>
             <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-              pariatur labore nihil esse at aliquam explicabo.
+              I am an individual passionate about the world of Fullstack
+              Development. With a high level of dedication, I am ready to face
+              any challanges in developing technological solutions.
             </p>
           </div>
           <div class="w-full px-4 lg:w-1/2">
@@ -218,10 +221,9 @@
               Let's create friends
             </h3>
             <p class="font-medium text-base text-secondary mb-6 lg:text-lg">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est amet
-              fugit facere illum natus dolor eaque hic beatae, quibusdam iusto
-              molestias, rerum dolorem doloribus sapiente sint minima ratione
-              delectus neque.
+              I believe in building good relationship. Let's connect,
+              collaborate, and together create extraordinary things in the world
+              of technology.
             </p>
             <div class="flex items-center">
               <!-- Youtube -->
@@ -496,21 +498,28 @@
     </section>
     <!-- Portfolio Section End -->
 
-    <!-- Company Section Start -->
-    <section id="company" class="pt-36 pb-32 bg-slate-800 dark:bg-slate-300">
+    <!-- My Experience Section Start -->
+    <section id="experience" class="pt-36 pb-32 bg-slate-800 dark:bg-slate-300">
       <div class="container">
         <div class="w-full px-4">
           <div class="mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-primary mb-2">Company</h4>
+            <h4 class="font-semibold text-lg text-primary mb-2">
+              My Experience
+            </h4>
             <h2
               class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-dark"
             >
-              Experience Job
+              Work Experience
             </h2>
             <p class="font-medium text-md text-secondary md:text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus alias facilis pariatur quasi neque. Aliquid, nihil
-              eveniet? Laboriosam, suscipit molestiae.
+              During my professional journey, I had the opportunity to intern at
+              PT Karlin Mastrindo, gaining valuable insights into the industry.
+              As a fresh graduate, I began my career at PT Connexist Indonesia,
+              where I contributed to innovative projects. Subsequently, I
+              transitioned to PT Citra Agung Mestika, expanding my skills and
+              knowledge in a dynamic environment. Currently, I am contributing
+              my expertise to PT Pam Digital Teknologi, where I continue to
+              thrive and grow.
             </p>
           </div>
         </div>
@@ -1046,22 +1055,24 @@
         </div>
       </div>
     </section>
-    <!-- Company Section End -->
+    <!-- My Experience Section End -->
 
-    <!-- Blog Section Start -->
-    <section id="blog" class="pt-36 pb-32 bg-slate-100 dark:bg-dark">
+    <!-- Service Section Start -->
+    <section id="services" class="pt-36 pb-32 bg-slate-100 dark:bg-dark">
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-primary mb-2">Blog</h4>
+            <h4 class="font-semibold text-lg text-primary mb-2">Services</h4>
             <h2
               class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white"
             >
-              Latest News
+              My Expertise
             </h2>
             <p class="font-medium text-md text-secondary md:text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
-              voluptatibus nam similique, cum repellat illum.
+              I am well-versed in frontend, backend, and DevOps, drawing from my
+              experience as a fullstack professional. With a deep understanding
+              of these domains, I am equipped to provide comprehensive and
+              effective solutions.
             </p>
           </div>
         </div>
@@ -1071,8 +1082,8 @@
               class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800"
             >
               <img
-                src="https://source.unsplash.com/360x200?programming"
-                alt="programing"
+                src="https://source.unsplash.com/360x200?frontend"
+                alt="frondend"
                 class="w-full"
               />
               <div class="py-8 px-6">
@@ -1080,12 +1091,18 @@
                   <a
                     href="#"
                     class="block mb-6 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white"
-                    >Trick Learn Programming</a
+                    >Frontend Developer</a
                   >
                 </h3>
                 <p class="font-medium text-secondary text-base mb-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Expedita, repellendus.
+                  In my role as a Frontend Developer, I have hands-on experience
+                  with a diverse technology stack. I've worked with
+                  <span class="font-bold text-dark dark:text-white"
+                    >JavaScript, PHP, Laravel, CodeIgniter, React.js, Tailwind
+                    CSS, HTML, CSS, Next.js, React Native, and Flutter</span
+                  >. This extensive exposure has equipped me with the skills to
+                  create engaging and responsive user interfaces across various
+                  platforms.
                 </p>
                 <a
                   href="#"
@@ -1100,8 +1117,8 @@
               class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800"
             >
               <img
-                src="https://source.unsplash.com/360x200?saxophone"
-                alt="saxophone"
+                src="https://source.unsplash.com/360x200?backend"
+                alt="backend"
                 class="w-full"
               />
               <div class="py-8 px-6">
@@ -1109,12 +1126,34 @@
                   <a
                     href="#"
                     class="block mb-6 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white"
-                    >Saxophone is CK</a
+                    >Backend Developer</a
                   >
                 </h3>
                 <p class="font-medium text-secondary text-base mb-4">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Voluptatum eaque quam magni et cum dolorum quas harum earum.
+                  As a backend developer, I have extensive experience working
+                  with various technologies. My stack includes
+                  <span class="font-bold text-dark dark:text-white"
+                    >PHP, JavaScript, Express.js, Node.js, Golang, and
+                    Laravel</span
+                  >. I am proficient in working with SQL databases such as
+                  <span class="font-bold text-dark dark:text-white"
+                    >MySQL and PostgreSQL</span
+                  >, as well as non-SQL databases like
+                  <span class="font-bold text-dark dark:text-white"
+                    >MongoDB, CouchDB, and Firebase.</span
+                  >
+                  Additionally, I have expertise in designing API architectures,
+                  utilizing
+                  <span class="font-bold text-dark dark:text-white"
+                    >RESTful API, gRPC, WebSockets, and MQTT</span
+                  >. In my previous projects, I successfully connected backend
+                  applications with various vendor APIs, contributing to the
+                  seamless integration of services. Some of the applications
+                  I've worked on include
+                  <span class="font-bold text-dark dark:text-white"
+                    >RajaBiller, DANA, Winpay, TCash, Duitku, Vocagame,
+                    Midtrans, and Rajaongkir</span
+                  >.
                 </p>
                 <a
                   href="#"
@@ -1129,8 +1168,8 @@
               class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800"
             >
               <img
-                src="https://source.unsplash.com/360x200?drum"
-                alt="drum"
+                src="https://source.unsplash.com/360x200?devops"
+                alt="devops"
                 class="w-full"
               />
               <div class="py-8 px-6">
@@ -1138,12 +1177,19 @@
                   <a
                     href="#"
                     class="block mb-6 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white"
-                    >Drummer Pro Aeron</a
+                    >Devops Developer</a
                   >
                 </h3>
                 <p class="font-medium text-secondary text-base mb-4">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aut hic debitis sed iure fugit?
+                  In my role as a DevOps developer, I have hands-on experience
+                  utilizing containerization with <span class="font-bold text-dark dark:text-white"
+                  >Kubernetes and Docker</span>.
+                  Additionally, I have successfully created <span class="font-bold text-dark dark:text-white"
+                  >virtual private
+                  servers (VPS)</span> to deploy backend applications. My expertise
+                  extends to crafting CI/CD pipelines, ensuring seamless
+                  automation of the build and deployment processes for backend
+                  applications to servers.
                 </p>
                 <a
                   href="#"
@@ -1156,7 +1202,7 @@
         </div>
       </div>
     </section>
-    <!-- Blog Section End -->
+    <!-- Service Section End -->
 
     <!-- Contact Section Start -->
     <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
